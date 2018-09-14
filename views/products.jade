@@ -1,0 +1,37 @@
+link(rel='stylesheet', type='text/css', href='/css/dataTables.bootstrap.min.css')
+link(rel='stylesheet', href='/css/jquery.dataTables.min.css')
+.col-md-6.col-lg-6
+  form(action='/app/products', method='post')
+    // name
+    .form-group.row
+      label.col-sm-3.col-md-3.col-lg-3.col-form-label Name
+      .col-sm-9.col-md-9.col-lg-9
+        input#first-name.form-control(style='width: 15%;', type='text', name='Name', required='true', placeholder='Enter name...')
+    // price
+    .form-group.row
+      label.col-sm-3.col-md-3.col-lg-3.col-form-label Price
+      .col-sm-9.col-md-9.col-lg-9
+        input.form-control(style='width: 15%;', type='text', name='price', required='true', placeholder='Enter price...')
+    // size
+    .form-group.row
+      label.col-sm-3.col-md-3.col-lg-3.col-form-label Size
+      .col-sm-9.col-md-9.col-lg-9
+        input.form-control(style='width: 15%;', type='text', name='size', required='true', placeholder='Enter size...')
+    // manufactured date
+    .form-group.row
+      label.col-sm-3.col-md-3.col-lg-3.col-form-label Date of manufactured
+      .col-sm-9.col-md-9.col-lg-9
+        input.form-control(style='width: 15%;', type='text', name='dateOfManufactured', required='true', placeholder='DD/MM/YYYY')
+    // expired date
+    .form-group.row
+      label.col-sm-3.col-md-3.col-lg-3.col-form-label Date of expired
+      .col-sm-9.col-md-9.col-lg-9
+        input.form-control(style='width: 15%;', type='text', name='dateOfExpired', required='true', placeholder='DD/MM/YYYY')
+    table#add-new-product.table.table-striped.table-bordered(cellspacing='0', width='15%')
+      // JavaScript works here!
+    input.btn.btn-success(style='margin-left:20%',type='Submit', name='Submit', value='Add product')
+    input.btn.btn-success(type='Submit', name='Submit', value='edit')
+    input.btn.btn-success(type='Submit', name='Submit', value='delete')
+script(type='text/javascript', src='/js/jquery.dataTables.min.js')
+script(type='text/javascript', src='/js/dataTables.bootstrap.min.js')
+script(type='text/javascript', src='/scripts/addproducts.js')

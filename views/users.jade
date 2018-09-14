@@ -1,0 +1,48 @@
+link(rel='stylesheet', type='text/css', href='/css/dataTables.bootstrap.min.css')
+link(rel='stylesheet', href='/css/jquery.dataTables.min.css')
+.col-md-6.col-lg-6
+  form(action='/app/user', method='post')
+    // First name input
+    .form-group.row
+      label.col-sm-3.col-md-3.col-lg-3.col-form-label First Name
+      .col-sm-9.col-md-9.col-lg-9
+        input#first-name.form-control(style='width: 15%;', type='text', name='firstName', required='true', placeholder='Enter first name...')
+    // Last name input
+    .form-group.row
+      label.col-sm-3.col-md-3.col-lg-3.col-form-label Last Name
+      .col-sm-9.col-md-9.col-lg-9
+        input.form-control(style='width: 15%;', type='text', name='lastName', required='true', placeholder='Enter last name...')
+    // email
+    .form-group.row
+      label.col-sm-3.col-md-3.col-lg-3.col-form-label email.
+      .col-sm-9.col-md-9.col-lg-9
+        input.form-control(style='width: 15%;', type='text', name='email', required='true', placeholder='Enter email...')
+    // password
+    .form-group.row
+      label.col-sm-3.col-md-3.col-lg-3.col-form-label password
+      .col-sm-9.col-md-9.col-lg-9
+        input.form-control(style='width: 15%;', type='text', name='password', required='true', placeholder='enter password')
+    // Date of birth
+    .form-group.row
+      label.col-sm-3.col-md-3.col-lg-3.col-form-label Date of birth
+      .col-sm-9.col-md-9.col-lg-9
+        input.form-control(style='width: 15%;', type='text', name='dateOfBirth', required='true', placeholder='DD/MM/YYYY')
+    // gender
+    .form-group.row
+      label.col-sm-3.col-md-3.col-lg-3.col-form-label gender
+      .col-sm-9.col-md-9.col-lg-9
+        .btn-group(data-toggle='buttons')
+          label.btn.btn-primary.active(style='margin:0px;')
+            input#male-radio(type='radio', name='gender', value='male', autocomplete='off', checked='')
+            | Male
+          label.btn.btn-primary(style='margin:0px;')
+            input#female-radio(type='radio', name='gender', value='female', autocomplete='off')
+            |  Female
+    table#add-new-user.table.table-striped.table-bordered(cellspacing='0', width='15%')
+      // JavaScript works here!
+    input.btn.btn-success(style='margin-left:20%',type='Submit', name='Submit', value='Add user')
+    input.btn.btn-success(type='Submit', name='Submit', value='edit')
+    input.btn.btn-success( type='Submit', name='Submit', value='delete')
+script(type='text/javascript', src='/js/jquery.dataTables.min.js')
+script(type='text/javascript', src='/js/dataTables.bootstrap.min.js')
+script(type='text/javascript', src='/scripts/adduser.js')

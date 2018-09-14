@@ -1,0 +1,28 @@
+extends ./layouts/layout
+block content
+    link(rel='stylesheet', type='text/css', href='/css/dataTables.bootstrap.min.css')
+    link(rel='stylesheet', href='/css/jquery.dataTables.min.css')
+    // <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+      body
+    .row
+    .col-lg-4.col-md-4
+        .panel.panel-primary
+        .row
+            .col-xs-3
+            .col-xs-9.text-right
+    .col-lg-4.col-md-4
+        .panel.panel-red
+        .panel-heading
+            .row
+            .col-xs-3
+            .col-xs-9.text-right
+    .col-lg-4.col-md-4
+        .panel.panel-orange
+        .row
+            .col-xs-3
+            .col-xs-9.text-right
+    // <script type="text/javascript" src="/js/jquery-1.12.4.js"></script>
+    script(type='text/javascript', src='/js/jquery.dataTables.min.js')
+    script(type='text/javascript', src='/js/dataTables.bootstrap.min.js')
+    script(type='text/javascript', src='/scripts/dashboard.js')
+
