@@ -115,7 +115,11 @@ app.use('/', products);
 app.use('/', orders);
 app.use('/', settings);
 
-
+app.use((req, res, next) => {
+    res.status(200).json({
+        message: 'its work!'
+    });
+});
 var timestamp = new Date().getTime();
 
 /*
